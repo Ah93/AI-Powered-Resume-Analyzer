@@ -6,8 +6,77 @@ from resume_analyzer import analyze_resume, match_resume
 st.markdown(
     """
     <h1 style='text-align: center; color: #007BFF;'>
-        📄 AI-Powered Resume Analyzer and Matcher
+        📄 AI-Powered Resume Analyzer and Job Matcher
     </h1>
+
+     <style>
+    /* --- Global App Style --- */
+    .stApp {
+        background-color: #f5f5f5;
+        font-family: 'Segoe UI', sans-serif;
+        padding: 1rem;
+    }
+
+    /* --- Headings --- */
+    h1, h2, h3, h4 {
+        color: #007BFF;
+    }
+
+    /* --- Buttons --- */
+    .stButton > button {
+        background-color: #007BFF;
+        color: white;
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        border: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+    .stButton > button:hover {
+        background-color: #0056b3;
+    }
+
+    /* --- File Uploader & Text Area Borders --- */
+    .stTextArea, .stFileUploader, .stTextInput {
+        border-radius: 10px;
+    }
+
+    /* --- Expander Panels --- */
+    details > summary {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #007BFF;
+    }
+    details {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 0.5rem;
+        margin-bottom: 0.75rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    /* --- Code/Text Blocks --- */
+    pre {
+        background-color: #f0f0f0;
+        padding: 0.75rem;
+        border-radius: 8px;
+        overflow-x: auto;
+    }
+
+    /* --- Scrollbar Styling (Optional) --- */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f5f5f5;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #007BFF;
+        border-radius: 10px;
+    }
+    </style>
+    
     """,
     unsafe_allow_html=True
 )
