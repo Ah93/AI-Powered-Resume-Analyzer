@@ -3,13 +3,9 @@ import re
 from pdf_reader import extract_text_from_pdf
 from resume_analyzer import analyze_resume, match_resume
 
-st.markdown(
-    """
-    <h1 style='text-align: center; color: #007BFF;'>
-        📄 AI-Powered Resume Analyzer and Job Matcher
-    </h1>
-
-     <style>
+# --- Custom CSS (Place at very top after imports) ---
+st.markdown("""
+    <style>
     /* --- Global App Style --- */
     .stApp {
         background-color: #f5f5f5;
@@ -64,7 +60,7 @@ st.markdown(
         overflow-x: auto;
     }
 
-    /* --- Scrollbar Styling (Optional) --- */
+    /* --- Scrollbar Styling --- */
     ::-webkit-scrollbar {
         width: 10px;
     }
@@ -76,10 +72,18 @@ st.markdown(
         border-radius: 10px;
     }
     </style>
-    
+""", unsafe_allow_html=True)
+
+# --- Title (Now appears *after* styles apply) ---
+st.markdown(
+    """
+    <h1 style='text-align: center; color: #007BFF;'>
+        📄 AI-Powered Resume Analyzer and Job Matcher
+    </h1>
     """,
     unsafe_allow_html=True
 )
+
 
 # --- Helper Functions ---
 def extract_match_score(text):
